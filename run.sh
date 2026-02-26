@@ -1,6 +1,6 @@
 
 
-# docker build --network=host -t flclash:0.8.92 /home/udeer/flclash_project 2>&1 | tail -12
+# docker build --network=host -t flclash:0.8.92 . 
 
 xhost +local:docker && docker run --rm \
   --gpus all \
