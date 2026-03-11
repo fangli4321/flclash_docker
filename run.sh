@@ -3,6 +3,7 @@
 # docker build --network=host -t flclash:0.8.92 . 
 
 xhost +local:docker && docker run --rm \
+  -d \
   --gpus all \
   -e NVIDIA_DISABLE_REQUIRE=1 \
   -e NVIDIA_DRIVER_CAPABILITIES=all \
