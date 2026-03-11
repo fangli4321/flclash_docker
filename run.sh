@@ -1,15 +1,14 @@
 
-
-# docker build --network=host -t flclash:0.8.92 . 
+# docker build --network=host -t flclash:0.8.92 .
 
 xhost +local:docker && docker run --rm \
-  -d \
   --gpus all \
   -e NVIDIA_DISABLE_REQUIRE=1 \
   -e NVIDIA_DRIVER_CAPABILITIES=all \
   -e DISPLAY="$DISPLAY" \
   -v /tmp/.X11-unix:/tmp/.X11-unix \
   -v "$HOME/.config/FlClash:/root/.config/FlClash" \
+  -v "$HOME/.local/share/FlClash:/root/.local/share/FlClash" \
   -v /run/dbus/system_bus_socket:/run/dbus/system_bus_socket \
   --net=host \
   flclash:0.8.92
