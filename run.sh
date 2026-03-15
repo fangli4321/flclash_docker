@@ -11,4 +11,4 @@ xhost +local:docker && docker run --rm \
   -v "$HOME/.local/share/FlClash:/root/.local/share/FlClash" \
   -v /run/dbus/system_bus_socket:/run/dbus/system_bus_socket \
   --net=host \
-  flclash:0.8.92
+  flclash

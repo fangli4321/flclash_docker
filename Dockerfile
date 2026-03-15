@@ -1,12 +1,6 @@
 FROM registry.mipmap3d.com/docker/nvidia/cuda:12.8.0-base-ubuntu22.04
 
-ENV DEBIAN_FRONTEND=noninteractive \
-    HTTP_PROXY=http://127.0.0.1:7890 \
-    HTTPS_PROXY=http://127.0.0.1:7890 \
-    http_proxy=http://127.0.0.1:7890 \
-    https_proxy=http://127.0.0.1:7890 \
-    NO_PROXY=localhost,127.0.0.1 \
-    no_proxy=localhost,127.0.0.1
+ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
